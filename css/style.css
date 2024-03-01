@@ -22,7 +22,7 @@ body{
     grid-template-columns: minmax(160px, 1fr) 3fr 300px;
     grid-template-areas: 
     "header header header"
-    "slide-nav content ads" 
+    "sidebar content ads" 
     "footer footer footer";
 }
 
@@ -30,10 +30,58 @@ header{
     grid-area: header;
     background: linear-gradient(135deg, #8844ee, #B07DFB);
     padding: 30px;
+    display: grid;
     grid-template-columns: 1fr auto;
     align-items: center;
 }
 
 .logo{
     max-width: 200px;
+}
+
+.header ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.header nav a{
+    display: block;
+    padding: 10px;
+    color: white;
+    background: rgba(0,0,0,.1);
+    font-size: 1.125em;
+    border-radius: 5px;
+    transition: .1s;
+}
+
+.header nav a:hover{
+    background: rgba(0,0,0,.5);
+}
+
+.header li+li{
+    margin-left: 30px;
+}
+
+/*SIDEBAR*/
+
+.sidebar{
+    grid-area: sidebar;
+    background: #fafbfc;
+    padding: 30px;
+}
+
+.sidebar li a{
+    display: block;
+    min-width: 60px;
+    max-width: 100px;
+    margin: 0 auto 30px auto;
+    background: white;
+    padding: 20px ;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px 0px rgba(44,44,44, 0.15);
+    transition: .1s ease-out;
+}
+
+.sidebar li a:hover{
+    background: #B07DFBg;
 }
